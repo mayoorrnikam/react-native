@@ -66,6 +66,16 @@ const HomeScreen = ({ navigation }) => {
       />
     </View>
 
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title='Generate Random Color Square Demo'
+        onPress={() => {
+          console.log('Generate Random Color Square Demo button pressed.');
+          navigation.navigate('Square')
+        }}
+      />
+    </View>
+
     <Text style={styles.textMargin}>Above are the normal Button components in the react native which are basic components</Text>
 
     {/* <TouchableOpacity onPress={ ()=> {
