@@ -2,52 +2,62 @@ import React from 'react';
 import { Text, StyleSheet, View, Button } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
   return <View>
     <Text style={styles.headertext}>Home Screen APP</Text>
-   
+
     <View style={styles.buttonViewStyle}>
-      <Button 
+      <Button
         title="Go To Component Screen"
-        onPress={()=> {
+        onPress={() => {
           console.log('Go To Component Screen button pressed.');
           navigation.navigate('Components')
-          }}
-        />
-    </View>
-
-    <View style={styles.buttonViewStyle}>
-      <Button 
-        title=" Go To List Screen"
-        onPress={()=> {
-          console.log('Go To List Screen button pressed.');
-          navigation.navigate('ListScreen')
-          }}
-        />
-    </View>
-
-    <View style={styles.buttonViewStyle}>
-      <Button 
-        title="Go To Practice Component Screen"
-        onPress={()=> {
-          console.log('Go To Practice Component Screen button pressed.');
-          navigation.navigate('PractComponent')
-          }}
-        />
+        }}
+      />
     </View>
 
     <View style={styles.buttonViewStyle}>
       <Button
-      title='Go To ImageScreen'
-      onPress={() => {
-        console.log('Go To ImageScreen button pressed.');
-        navigation.navigate('Image')
-      }}
+        title=" Go To List Screen"
+        onPress={() => {
+          console.log('Go To List Screen button pressed.');
+          navigation.navigate('ListScreen')
+        }}
       />
     </View>
 
-    <Text style={styles.text}>Above are the normal Button components in the react native which are basic components</Text>
-    
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title="Go To Practice Component Screen"
+        onPress={() => {
+          console.log('Go To Practice Component Screen button pressed.');
+          navigation.navigate('PractComponent')
+        }}
+      />
+    </View>
+
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title='Go To ImageScreen'
+        onPress={() => {
+          console.log('Go To ImageScreen button pressed.');
+          navigation.navigate('Image')
+        }}
+      />
+    </View>
+
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title='Go To CounterScreen Demo'
+        onPress={() => {
+          console.log('Go To CounterScreen Demo button pressed.');
+          navigation.navigate('CntScreen')
+        }}
+      />
+    </View>
+
+    <Text style={styles.textMargin}>Above are the normal Button components in the react native which are basic components</Text>
+
     {/* <TouchableOpacity onPress={ ()=> {
       console.log('Go To List Screen button pressed.');
       props.navigation.navigate('ListScreen')
@@ -75,6 +85,10 @@ const styles = StyleSheet.create({
     marginBottom: 5
   },
 
+  textMargin: {
+    fontSize: 16,
+    margin: 10
+  }
 });
 
 export default HomeScreen;
