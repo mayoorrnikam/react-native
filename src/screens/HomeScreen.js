@@ -71,7 +71,7 @@ const HomeScreen = ({ navigation }) => {
         title='Generate Random Color Square Demo'
         onPress={() => {
           console.log('Generate Random Color Square Demo button pressed.');
-          navigation.navigate('Square')
+          navigation.navigate('SquareWithState')
         }}
       />
     </View>

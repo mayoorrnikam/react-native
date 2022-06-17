@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
-import ColorCounter from '../components/colorCounter'
+import ColorCounter from '../components/ColorCounter'
+import DemoTitle from '../components/DemoTitle'
 
 const COLOR_INCREMENT = 15
 
-const SqureScreen = () => {
+const SquareScreen = () => {
     const [red, setRed] = useState(0)
     const [green, setGreen] = useState(0)
     const [blue, setBlue] = useState(0)
-
 
     const setColor = (color, change) => {
         // color ==== 'red' or 'green' or 'blue'
@@ -33,6 +33,8 @@ const SqureScreen = () => {
     }
 
     return <View>
+        <DemoTitle title={"Generate random color square with State Management"} />
+
         <ColorCounter
             color="Red"
             onIncrease={() => setColor('red', COLOR_INCREMENT)}
@@ -74,4 +76,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SqureScreen;
+export default SquareScreen;
