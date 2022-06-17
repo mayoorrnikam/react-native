@@ -48,10 +48,20 @@ const HomeScreen = ({ navigation }) => {
 
     <View style={styles.buttonViewStyle}>
       <Button
-        title='Go To CounterScreen Demo'
+        title='Update Counter Demo'
         onPress={() => {
-          console.log('Go To CounterScreen Demo button pressed.');
-          navigation.navigate('CntScreen')
+          console.log('Update Counter Demo button pressed.');
+          navigation.navigate('CounterChange')
+        }}
+      />
+    </View>
+
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title='Generate Random Color Demo'
+        onPress={() => {
+          console.log('Generate Random Color Demo button pressed.');
+          navigation.navigate('ColorChange')
         }}
       />
     </View>
