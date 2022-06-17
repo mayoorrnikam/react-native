@@ -9,7 +9,6 @@ const SqureScreen = () => {
     const [green, setGreen] = useState(0)
     const [blue, setBlue] = useState(0)
 
-
     const setColor = (color, change) => {
         // color ==== 'red' or 'green' or 'blue'
         // change === +15 or -15
