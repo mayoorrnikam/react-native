@@ -68,10 +68,20 @@ const HomeScreen = ({ navigation }) => {
 
     <View style={styles.buttonViewStyle}>
       <Button
-        title='Generate Random Color Square Demo'
+        title='React UseState Hook Demo'
         onPress={() => {
           console.log('Generate Random Color Square Demo button pressed.');
           navigation.navigate('SquareWithState')
+        }}
+      />
+    </View>
+
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title='React UseReducer Hook Demo '
+        onPress={() => {
+          console.log('Generate Random Color Square Demo button pressed.');
+          navigation.navigate('SquareWithReducer')
         }}
       />
     </View>
