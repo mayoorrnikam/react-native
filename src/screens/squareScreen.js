@@ -35,6 +35,7 @@ const SquareScreen = () => {
     return <View>
         <DemoTitle title={"Generate random color square with State Management"} />
 
+        <Text style={styles.text} > Red: {red}, Green: {green}, Blue: {blue}</Text>
         <ColorCounter
             color="Red"
             onIncrease={() => setColor('red', COLOR_INCREMENT)}
@@ -53,26 +54,31 @@ const SquareScreen = () => {
             onDecrease={() => setColor('blue', -1 * COLOR_INCREMENT)}
         />
 
-        <View
-            style={
-                {
-                    height: 150,
-                    width: 150,
-                    backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-                    marginTop: 5,
-                    marginStart: 20,
-                    marginEnd: 20,
-                    marginBottom: 5
+        <View style={{
+            alignItems: 'center', //Centered vertically
+            flex: 1
+        }}>
+            <View
+                style={
+                    {
+                        height: 150,
+                        width: 150,
+                        backgroundColor: `rgb(${red}, ${green}, ${blue})`,
+                        marginTop: 5,
+                        marginStart: 20,
+                        marginEnd: 20,
+                        marginBottom: 5
+                    }
                 }
-            }
-        />
-
-    </View>
+            />
+        </View>
+    </View >
 }
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: 20
+        fontSize: 16,
+        margin: 16
     }
 })
 
