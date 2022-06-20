@@ -58,6 +58,16 @@ const HomeScreen = ({ navigation }) => {
 
     <View style={styles.buttonViewStyle}>
       <Button
+        title='Update Counter With Reducer Demo'
+        onPress={() => {
+          console.log('Update Counter Demo button pressed.');
+          navigation.navigate('CounterReducer')
+        }}
+      />
+    </View>
+
+    <View style={styles.buttonViewStyle}>
+      <Button
         title='Generate Random Color Demo'
         onPress={() => {
           console.log('Generate Random Color Demo button pressed.');
