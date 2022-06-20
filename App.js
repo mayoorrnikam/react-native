@@ -25,7 +25,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "React Next Gen App",
+      title: "React Next Gen App By Mayur",
     },
   }
 );
