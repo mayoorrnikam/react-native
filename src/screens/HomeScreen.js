@@ -96,6 +96,17 @@ const HomeScreen = ({ navigation }) => {
       />
     </View>
 
+
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title='React Text-Input Demo '
+        onPress={() => {
+          console.log('Display Text from TextInput Demo pressed.');
+          navigation.navigate('TextInputDemo')
+        }}
+      />
+    </View>
+
     <Text style={styles.textMargin}>Above are the normal Button components in the react native which are basic components</Text>
 
     {/* <TouchableOpacity onPress={ ()=> {
