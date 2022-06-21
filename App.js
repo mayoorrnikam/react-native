@@ -12,7 +12,7 @@ import SquareColorScreenWithReducer from "./src/screens/SquareColorScreenWithRed
 import CounterWithReducer from "./src/screens/CounterWithReducer";
 import TextInputScreen from "./src/screens/TexInputScreen";
 import PassportTextInputScreen from "./src/screens/PassportTextInputScreen";
-
+import BoxScreen from "./src/screens/BoxScreen";
 
 
 const navigator = createStackNavigator(
@@ -28,7 +28,8 @@ const navigator = createStackNavigator(
     SquareWithReducer: SquareColorScreenWithReducer,
     CounterReducer: CounterWithReducer,
     TextInputDemo: TextInputScreen,
-    PasswordTextInput: PassportTextInputScreen
+    PasswordTextInput: PassportTextInputScreen,
+    UIBoxChanges: BoxScreen
   },
 
   {

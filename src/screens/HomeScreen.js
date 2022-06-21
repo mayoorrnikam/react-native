@@ -117,6 +117,16 @@ const HomeScreen = ({ navigation }) => {
       />
     </View>
 
+    <View style={styles.buttonViewStyle}>
+      <Button
+        title='React UI BoxScreen Demo '
+        onPress={() => {
+          console.log('Display UI BoxScreen Demo pressed.');
+          navigation.navigate('UIBoxChanges')
+        }}
+      />
+    </View>
+
     <Text style={styles.textMargin}>Above are the normal Button components in the react native which are basic components</Text>
 
     {/* <TouchableOpacity onPress={ ()=> {
