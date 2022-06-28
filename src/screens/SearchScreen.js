@@ -1,18 +1,23 @@
 import { StyleSheet, Text, Button, View } from 'react-native'
 import React, { useState } from 'react'
 import SearchBar from '../components/SearchBar';
+import useYelpResults from '../hooks/useYelpResults';
 
 
 const SearchScreen = () => {
     const [searchTerm, setSearchTerm] = useState('')
+    const [searchYelpApi, setErrorMessage, setResults, results, errorMessage] = useYelpResults()
+
     return (
         <View style={styles.background}>
             <Text>SearchScreen</Text>
             <SearchBar
                 searchTerm={searchTerm}
                 onTermChange={newSearchTerm => setSearchTerm(newSearchTerm)}
-                onTermSubmit={() => { console.log(searchTerm) }} />
-            <Text> Input Text: {searchTerm}</Text>
+                onTermSubmit={() => { setErrorMessage(''), setResults(0), searchYelpApi(searchTerm) }} />
+
+            {errorMessage ? <Text>{errorMessage}</Text> : null}
+            <Text> We have found {results.length} results</Text>
         </View>
     )
 }
