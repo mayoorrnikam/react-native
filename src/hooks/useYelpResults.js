@@ -23,7 +23,7 @@ export default () => {
     }
 
     useEffect(() => {
-        searchYelpApi('pasta');
+        searchYelpApi('cake');
     }, []);
 
     return [searchYelpApi, setErrorMessage, setResults, results, errorMessage]
